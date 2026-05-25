@@ -3979,32 +3979,55 @@ textarea.absRsvpField {
     object-fit: cover;
 }
 
-.absContactHeroInner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+.absContactIntro {
+    padding: 80px 0 100px;
+    background-color: #fff;
+}
+
+.absContactIntroGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
     max-width: 1680px;
     margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 0 60px;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+}
+
+.absContactIntroText {
+    padding-top: 24px;
+}
+
+.absContactIntroText h1 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    color: var(--abs-blackish);
+    margin: 0 0 40px;
+    max-width: 600px;
+}
+
+.absContactIntroText p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0;
+    max-width: 600px;
 }
 
 .absContactFormCard {
-    pointer-events: auto;
     background-color: var(--abs-blackish);
     padding: 56px 48px;
     color: #fff;
-    width: 600px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-top: -260px;
     position: relative;
-    top: 220px;
+    z-index: 3;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -4037,37 +4060,6 @@ textarea.absRsvpField {
     display: block;
     margin: 14px auto 0;
     min-width: 160px;
-}
-
-.absContactIntro {
-    padding: 280px 0 80px;
-    background-color: #fff;
-}
-
-.absContactIntroInner {
-    max-width: 1680px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.absContactIntroInner h1 {
-    font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 80px;
-    line-height: 80px;
-    font-weight: 700;
-    letter-spacing: -1.6px;
-    color: var(--abs-blackish);
-    margin: 0 0 40px;
-    max-width: 720px;
-}
-
-.absContactIntroInner p {
-    font-family: "Helvetica Neue Roman", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--abs-blackish);
-    margin: 0;
-    max-width: 720px;
 }
 
 .absContactLocation {
@@ -4156,10 +4148,14 @@ textarea.absRsvpField {
 }
 
 @media (max-width: 1199px) {
+    .absContactIntroText h1 {
+        font-size: 56px;
+        line-height: 60px;
+    }
+
     .absContactFormCard {
-        width: 480px;
         padding: 40px 36px;
-        top: 180px;
+        margin-top: -200px;
     }
 }
 
@@ -4168,30 +4164,31 @@ textarea.absRsvpField {
         height: 360px;
     }
 
-    .absContactHeroInner {
+    .absContactIntro {
+        padding: 48px 0 56px;
+    }
+
+    .absContactIntroGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
         padding: 0 24px;
-        justify-content: center;
-        align-items: flex-end;
+    }
+
+    .absContactIntroText {
+        padding-top: 0;
+        order: 2;
     }
 
     .absContactFormCard {
-        position: static;
-        top: auto;
-        width: 100%;
+        margin-top: -120px;
+        margin-left: auto;
+        margin-right: auto;
         max-width: 520px;
-        margin-bottom: -180px;
         padding: 32px 24px;
+        order: 1;
     }
 
-    .absContactIntro {
-        padding: 220px 0 56px;
-    }
-
-    .absContactIntroInner {
-        padding: 0 24px;
-    }
-
-    .absContactIntroInner h1 {
+    .absContactIntroText h1 {
         font-size: 40px;
         line-height: 44px;
         letter-spacing: -0.8px;
@@ -4223,7 +4220,7 @@ textarea.absRsvpField {
 }
 
 @media (max-width: 575px) {
-    .absContactIntroInner h1 {
+    .absContactIntroText h1 {
         font-size: 30px;
         line-height: 34px;
     }
