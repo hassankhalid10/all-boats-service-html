@@ -3960,3 +3960,735 @@ textarea.absRsvpField {
         padding: 32px 28px;
     }
 }
+
+/* ============================================================
+   CONTACT PAGE — page-specific
+   ============================================================ */
+.absContactHero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.absContactHeroImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.absContactHeroInner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 60px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.absContactFormCard {
+    pointer-events: auto;
+    background-color: var(--abs-blackish);
+    padding: 56px 48px;
+    color: #fff;
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    top: 220px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.absContactFormCard h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.absContactFormCard .absRsvpField {
+    border-radius: 24px;
+    border-color: var(--abs-light-gray-d9);
+    padding: 0 22px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.absContactFormCard textarea.absRsvpField {
+    height: 96px;
+    padding: 14px 22px;
+    border-radius: 18px;
+}
+
+.absContactFormCard .absBtn {
+    display: block;
+    margin: 14px auto 0;
+    min-width: 160px;
+}
+
+.absContactIntro {
+    padding: 280px 0 80px;
+    background-color: #fff;
+}
+
+.absContactIntroInner {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absContactIntroInner h1 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    color: var(--abs-blackish);
+    margin: 0 0 40px;
+    max-width: 720px;
+}
+
+.absContactIntroInner p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0;
+    max-width: 720px;
+}
+
+.absContactLocation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    padding: 0 0 100px;
+    background-color: #fff;
+}
+
+.absContactMap {
+    width: 100%;
+    height: 520px;
+    background-color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.absContactMapLabel {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.absContactLocationText {
+    padding: 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.absContactLocationText h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    color: var(--abs-blackish);
+    margin: 0 0 24px;
+}
+
+.absContactAddress {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 24px;
+}
+
+.absContactPhone {
+    display: inline-block;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-aqua);
+    margin-bottom: 28px;
+}
+
+.absContactPhone:hover {
+    color: var(--abs-aqua);
+    opacity: 0.85;
+}
+
+.absContactHours h4 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--abs-blackish);
+    margin: 0 0 4px;
+}
+
+.absContactHours p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0;
+}
+
+@media (max-width: 1199px) {
+    .absContactFormCard {
+        width: 480px;
+        padding: 40px 36px;
+        top: 180px;
+    }
+}
+
+@media (max-width: 991px) {
+    .absContactHero {
+        height: 360px;
+    }
+
+    .absContactHeroInner {
+        padding: 0 24px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .absContactFormCard {
+        position: static;
+        top: auto;
+        width: 100%;
+        max-width: 520px;
+        margin-bottom: -180px;
+        padding: 32px 24px;
+    }
+
+    .absContactIntro {
+        padding: 220px 0 56px;
+    }
+
+    .absContactIntroInner {
+        padding: 0 24px;
+    }
+
+    .absContactIntroInner h1 {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -0.8px;
+        margin-bottom: 24px;
+    }
+
+    .absContactLocation {
+        grid-template-columns: 1fr;
+        padding: 0 0 56px;
+    }
+
+    .absContactMap {
+        height: 320px;
+    }
+
+    .absContactMapLabel {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .absContactLocationText {
+        padding: 32px 24px;
+    }
+
+    .absContactLocationText h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .absContactIntroInner h1 {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .absContactPhone {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .absContactFormCard h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+/* ============================================================
+   SELL / TRADE PAGE — page-specific
+   ============================================================ */
+.absSellIntro {
+    padding: 90px 0 80px;
+    background-color: #fff;
+}
+
+.absSellIntroInner {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.absSellIntroInner h1 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    color: var(--abs-blackish);
+    margin: 0 0 24px;
+    max-width: 600px;
+}
+
+.absSellIntroInner p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 36px;
+    max-width: 820px;
+}
+
+.absSellAdvantage {
+    padding: 80px 0;
+    background-color: var(--abs-lightest-gray);
+}
+
+.absSellAdvantageInner {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absSellAdvantageTitle {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    color: var(--abs-blackish);
+    text-align: center;
+    margin: 0 0 56px;
+}
+
+.absSellAdvantageGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 40px;
+}
+
+.absSellAdvantageItem {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 400px;
+}
+
+.absSellAdvantageIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--abs-aqua);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.absSellAdvantageText h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    margin: 0 0 8px;
+}
+
+.absSellAdvantageText p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0;
+}
+
+.absSellProcess {
+    position: relative;
+    width: 100%;
+    min-height: 780px;
+    overflow: hidden;
+    background-color: var(--abs-blackish);
+    padding: 90px 0;
+    color: #fff;
+}
+
+.absSellProcessImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+
+.absSellProcessOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(32, 30, 31, 0.6);
+}
+
+.absSellProcessInner {
+    position: relative;
+    z-index: 2;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absSellProcessInner h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 56px;
+}
+
+.absSellProcessGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+}
+
+.absSellProcessCard {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid var(--abs-light-gray-d9);
+    border-radius: 8px;
+    padding: 100px 40px 40px;
+    min-height: 360px;
+}
+
+.absSellProcessNum {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--abs-aqua);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.absSellProcessCard h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    margin: 0 0 18px;
+}
+
+.absSellProcessCard p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0;
+}
+
+.absSellProcessFoot {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 24px;
+}
+
+.absSellProcessCta {
+    text-align: center;
+}
+
+.absSellProcessCta .absBtn {
+    min-width: 300px;
+}
+
+@media (max-width: 1199px) {
+    .absSellAdvantageGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .absSellProcessGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .absSellIntro {
+        padding: 56px 0;
+    }
+
+    .absSellIntroInner {
+        padding: 0 24px;
+    }
+
+    .absSellIntroInner h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .absSellAdvantage {
+        padding: 56px 0;
+    }
+
+    .absSellAdvantageInner {
+        padding: 0 24px;
+    }
+
+    .absSellAdvantageTitle {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 36px;
+    }
+
+    .absSellAdvantageGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .absSellAdvantageText h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .absSellProcess {
+        padding: 56px 0;
+    }
+
+    .absSellProcessInner {
+        padding: 0 24px;
+    }
+
+    .absSellProcessInner h2 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 36px;
+    }
+
+    .absSellProcessGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .absSellProcessCard {
+        padding: 90px 28px 28px;
+        min-height: auto;
+    }
+
+    .absSellProcessNum {
+        top: 28px;
+        left: 28px;
+    }
+
+    .absSellProcessCard h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .absSellProcessCta .absBtn {
+        min-width: 240px;
+    }
+}
+
+/* ============================================================
+   FAQ PAGE — page-specific
+   ============================================================ */
+.absFaqPage {
+    padding: 24px 0 100px;
+    background-color: #fff;
+}
+
+.absFaqPageCrumb {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(34, 34, 34, 0.6);
+    margin-bottom: 56px;
+}
+
+.absFaqPageCrumb a {
+    color: rgba(34, 34, 34, 0.6);
+}
+
+.absFaqPageCrumb a:hover {
+    color: var(--abs-aqua);
+}
+
+.absFaqPageTitle {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    color: var(--abs-blackish);
+    text-align: center;
+    margin: 0 0 56px;
+}
+
+.absFaqCategory {
+    max-width: 1108px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--abs-light-gray-e6);
+}
+
+.absFaqCategory:first-of-type {
+    border-top: 1px solid var(--abs-light-gray-e6);
+}
+
+.absFaqCategoryHead {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.absFaqCategoryHead:hover {
+    color: var(--abs-aqua);
+}
+
+.absFaqCategoryHead i {
+    font-size: 16px;
+    color: var(--abs-blackish);
+    transition: transform 0.2s ease;
+}
+
+.absFaqCategoryBody {
+    display: none;
+    padding: 8px 30px 40px;
+}
+
+.absFaqCategory.is-open .absFaqCategoryBody {
+    display: block;
+}
+
+.absFaqQA {
+    padding: 24px 0;
+    border-top: 1px solid var(--abs-light-gray-e6);
+}
+
+.absFaqQA:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.absFaqQALine {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 16px;
+}
+
+.absFaqQALine:last-child {
+    margin-bottom: 0;
+}
+
+.absFaqQA .absFaqQALine:first-child {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-weight: 700;
+}
+
+.absFaqQALabel {
+    color: var(--abs-aqua);
+    margin-right: 4px;
+}
+
+@media (max-width: 991px) {
+    .absFaqPage {
+        padding: 24px 0 64px;
+    }
+
+    .absFaqPageTitle {
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 32px;
+    }
+
+    .absFaqCategoryHead {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 24px 0;
+    }
+
+    .absFaqCategoryBody {
+        padding: 4px 0 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .absFaqPageTitle {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .absFaqCategoryHead {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
