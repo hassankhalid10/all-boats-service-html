@@ -2644,16 +2644,19 @@ textarea.absRsvpField {
     min-width: 160px;
 }
 
-/* About CTA banner — "Stop By and Say Hello" */
+/* About CTA banner — "Stop By and Say Hello" — full-bleed dark teal w/ image */
 .absCtaBanner {
     position: relative;
     width: 100%;
-    min-height: 360px;
+    min-height: 520px;
     overflow: hidden;
-    background-color: #2f4a55;
+    background-color: #486a76;
     color: #fff;
-    padding: 70px 24px;
+    padding: 110px 24px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .absCtaBannerImg {
@@ -2668,18 +2671,18 @@ textarea.absRsvpField {
 .absCtaBannerInner {
     position: relative;
     z-index: 2;
-    max-width: 680px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 .absCtaBannerInner h2 {
     font-family: "Helvetica Neue Heavy", sans-serif;
     font-size: 40px;
-    line-height: 48px;
+    line-height: 52px;
     font-weight: 700;
     letter-spacing: -0.8px;
     color: #fff;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 }
 
 .absCtaBannerInner p {
@@ -2687,18 +2690,78 @@ textarea.absRsvpField {
     font-size: 16px;
     line-height: 24px;
     color: #fff;
-    margin: 0 0 28px;
+    margin: 0 auto 28px;
+    max-width: 760px;
 }
 
-/* About quote inline in a row */
+/* About — "Meet the Team" quote with left vertical aqua bar */
 .absQuote {
+    position: relative;
+    padding-left: 24px;
+    margin: 24px 0;
     font-family: "Helvetica Neue Roman", sans-serif;
     font-style: italic;
     font-size: 16px;
     line-height: 24px;
     color: var(--abs-blackish);
-    margin: 0 0 22px;
-    padding-left: 0;
+}
+
+.absQuote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background-color: var(--abs-aqua);
+}
+
+/* Parts — Expert Guidance split panel (dark text L + image R) */
+.absExpertGuidance {
+    width: 100%;
+    background-color: var(--abs-blackish);
+}
+
+.absExpertGuidanceGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 520px;
+}
+
+.absExpertGuidanceText {
+    padding: 90px 80px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.absExpertGuidanceText h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #fff;
+    margin: 0 0 28px;
+    max-width: 520px;
+}
+
+.absExpertGuidanceText p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 32px;
+    max-width: 520px;
+}
+
+.absExpertGuidanceImg {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
 }
 
 /* ============================================================
@@ -2717,7 +2780,7 @@ textarea.absRsvpField {
     }
 
     .absBrandBox {
-        height: 100px;
+        height: 120px;
     }
 
     .absFinWhyGrid,
@@ -2727,9 +2790,23 @@ textarea.absRsvpField {
         padding: 56px 24px;
     }
 
+    .absFinWhy {
+        padding: 0;
+    }
+
+    .absFinWhy h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
     .absFinStat {
         font-size: 44px;
         line-height: 50px;
+    }
+
+    .absCtaBanner {
+        padding: 56px 24px;
+        min-height: auto;
     }
 
     .absCtaBannerInner h2 {
@@ -2739,6 +2816,29 @@ textarea.absRsvpField {
 
     .absBannerEyebrow {
         font-size: 16px;
+        line-height: 24px;
+    }
+
+    .absExpertGuidanceGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .absExpertGuidanceText {
+        padding: 48px 32px;
+    }
+
+    .absExpertGuidanceText h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .absExpertGuidanceImg {
+        min-height: 320px;
+        height: 320px;
+    }
+
+    .absCalcCard {
+        padding: 32px 24px;
     }
 }
 
