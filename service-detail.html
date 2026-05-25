@@ -37,72 +37,66 @@
 
     <main>
 
-        <!-- HERO BANNER -->
-        <section class="absBanner">
+        <!-- HERO -->
+        <section class="absBanner is-tall">
             <img src="./assets/images/service-details/Rectangle 2.png" alt="Expert Mechanical & Engine Repair" class="absBannerImg">
             <div class="absBannerOverlay"></div>
             <div class="absBannerContent">
                 <div>
                     <h1>Expert Mechanical &amp;<br>Engine Repair</h1>
-                    <div style="margin-top:24px;">
-                        <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
-                    </div>
+                    <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
                 </div>
             </div>
         </section>
 
-        <!-- INTRO PARAGRAPH -->
-        <section class="absSvcIntro" style="padding-bottom:24px;">
+        <!-- INTRO PARAGRAPH (centered) -->
+        <section class="absSvcDetailIntro">
             <div class="absContainer">
-                <div class="absSectionHead" style="margin-bottom:16px;">
-                    <p>As an authorized service dealer for the industry's top manufacturers, we provide specialized care that keeps your warranty intact and your engine performing at its peak.</p>
-                </div>
+                <p>As an authorized service dealer for the industry's top manufacturers, we provide specialized care that keeps your warranty intact and your engine performing at its peak.</p>
             </div>
         </section>
 
         <!-- SERVICE DETAIL ROWS -->
         <section class="absSvcCore" style="padding-top:32px;">
-            <div class="absContainer">
 
-                <div class="absSvcRow">
-                    <img src="./assets/images/service-details/Rectangle 344.png" alt="" class="absSvcRowImg">
-                    <div class="absSvcRowText">
-                        <h3>Computer Diagnostics</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="absSvcRowActions">
-                            <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
-                            <a href="javascript:void(0)" class="absLearnMore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
+            <div class="absSvcRow">
+                <img src="./assets/images/service-details/Rectangle 344.png" alt="" class="absSvcRowImg">
+                <div class="absSvcRowText">
+                    <h3>Computer Diagnostics</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="absSvcRowActions">
+                        <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
+                        <a href="javascript:void(0)" class="absLearnMore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-
-                <div class="absSvcRow is-reverse">
-                    <img src="./assets/images/service-details/Rectangle 345.png" alt="" class="absSvcRowImg">
-                    <div class="absSvcRowText">
-                        <h3>Major Rebuilds</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="absSvcRowActions">
-                            <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
-                            <a href="javascript:void(0)" class="absLearnMore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="absSvcRow is-reverse">
+                <img src="./assets/images/service-details/Rectangle 345.png" alt="" class="absSvcRowImg">
+                <div class="absSvcRowText">
+                    <h3>Major Rebuilds</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="absSvcRowActions">
+                        <a href="#requestService" class="absBtn absBtnAqua">Request Service</a>
+                        <a href="javascript:void(0)" class="absLearnMore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <!-- REQUEST SERVICE FORM -->
-        <section class="absRsvpForm" id="requestService">
+        <!-- REQUEST SERVICE -->
+        <section class="absRsvpForm is-svc" id="requestService">
             <div class="absContainer">
                 <div class="absRsvpInner">
                     <h2>Request Service</h2>
                     <form onsubmit="return false">
-                        <input type="text" class="absRsvpField" placeholder="Full Name">
-                        <input type="email" class="absRsvpField" placeholder="Email">
-                        <input type="tel" class="absRsvpField" placeholder="Phone">
-                        <input type="text" class="absRsvpField" placeholder="Boat Year/Make/Model">
+                        <input type="text" class="absRsvpField" placeholder="Full Name*">
+                        <input type="email" class="absRsvpField" placeholder="Email*">
+                        <input type="tel" class="absRsvpField" placeholder="Phone*">
+                        <input type="text" class="absRsvpField" placeholder="Boat Year Make Model*">
                         <input type="date" class="absRsvpField" placeholder="Preferred Service Date">
-                        <textarea class="absRsvpField" placeholder="Describe the service needed"></textarea>
+                        <textarea class="absRsvpField" placeholder="Describe Service Needs"></textarea>
                         <button type="submit" class="absBtn absBtnAqua">Submit</button>
                     </form>
                 </div>
@@ -112,21 +106,19 @@
         <!-- SERVICE FAQs -->
         <section class="absFaq">
             <div class="absContainer">
-                <div class="absSectionHead">
-                    <h2>Service FAQs</h2>
-                </div>
+                <div class="absSectionHead"><h2>Service FAQs</h2></div>
                 <div class="absFaqList">
                     <div class="absFaqItem">
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <span class="absFaqQ">Q. Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
+                        <p> A. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
                     </div>
                     <div class="absFaqItem">
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <span class="absFaqQ">Q. Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
+                        <p> A. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
                     </div>
                     <div class="absFaqItem">
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <span class="absFaqQ">Q. Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
+                        <p> A. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
                     </div>
                 </div>
             </div>
