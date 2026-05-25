@@ -1982,24 +1982,36 @@ textarea.absRsvpField {
 }
 
 /* ============================================================
-   SERVICE / SERVICE DETAIL PAGES
+   SERVICE / SERVICE DETAIL PAGES — pixel-matched to Figma
    ============================================================ */
+
+/* Hero banner taller variant for Service pages (600px in Figma) */
+.absBanner.is-tall {
+    height: 600px;
+}
+
+.absBanner.is-tall .absBannerContent h1 {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -1.6px;
+    margin: 0 0 32px;
+}
 
 /* Centered section header (title + optional subtitle) */
 .absSectionHead {
     text-align: center;
-    max-width: 760px;
+    max-width: 880px;
     margin: 0 auto 56px;
 }
 
 .absSectionHead h2 {
     font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 52px;
     font-weight: 700;
-    letter-spacing: -0.64px;
+    letter-spacing: -0.8px;
     color: var(--abs-blackish);
-    margin: 0 0 16px;
+    margin: 0 0 18px;
 }
 
 .absSectionHead p {
@@ -2011,28 +2023,31 @@ textarea.absRsvpField {
     margin: 0;
 }
 
-/* Intro split (text left + image right, used on Service page) */
+/* "Best Care" intro — full-bleed light bg, text left + image right */
 .absSvcIntro {
-    padding: 70px 0 80px;
-    background-color: #fff;
+    background-color: var(--abs-lightest-gray);
+    padding: 80px 0;
 }
 
 .absSvcIntroGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    gap: 80px;
     align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
 .absSvcIntroText h2 {
     font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 52px;
     font-weight: 700;
-    letter-spacing: -0.64px;
+    letter-spacing: -0.8px;
     color: var(--abs-blackish);
-    margin: 0 0 18px;
-    max-width: 420px;
+    margin: 0 0 24px;
+    max-width: 520px;
 }
 
 .absSvcIntroText p {
@@ -2040,28 +2055,33 @@ textarea.absRsvpField {
     font-size: 16px;
     line-height: 24px;
     color: var(--abs-blackish);
-    margin: 0 0 24px;
+    margin: 0 0 32px;
+    max-width: 540px;
 }
 
 .absSvcIntroImg {
     width: 100%;
-    height: 280px;
+    height: 480px;
     object-fit: cover;
     background-color: var(--abs-light-gray-d9);
 }
 
-/* Service core list — alternating image/text rows */
+/* Core services — alternating image/text rows */
 .absSvcCore {
-    padding: 0 0 90px;
+    padding: 90px 0 100px;
     background-color: #fff;
 }
 
 .absSvcRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    gap: 80px;
     align-items: center;
-    margin-bottom: 64px;
+    margin-bottom: 100px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 60px;
 }
 
 .absSvcRow:last-child {
@@ -2074,19 +2094,19 @@ textarea.absRsvpField {
 
 .absSvcRowImg {
     width: 100%;
-    height: 320px;
+    height: 480px;
     object-fit: cover;
     background-color: var(--abs-light-gray-d9);
 }
 
 .absSvcRowText h3 {
     font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 40px;
+    line-height: 52px;
     font-weight: 700;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.8px;
     color: var(--abs-blackish);
-    margin: 0 0 16px;
+    margin: 0 0 20px;
 }
 
 .absSvcRowText p {
@@ -2097,21 +2117,26 @@ textarea.absRsvpField {
     margin: 0 0 18px;
 }
 
-/* Bullet list with check icons */
+/* Bullet list with aqua dot */
 .absBulletList {
     list-style: none;
     padding: 0;
-    margin: 0 0 24px;
+    margin: 0 0 28px;
 }
 
 .absBulletList li {
     position: relative;
-    padding-left: 24px;
+    padding-left: 22px;
     font-family: "Helvetica Neue Roman", sans-serif;
     font-size: 16px;
     line-height: 26px;
     color: var(--abs-blackish);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.absBulletList li strong {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-weight: 700;
 }
 
 .absBulletList li::before {
@@ -2127,10 +2152,10 @@ textarea.absRsvpField {
 
 .absSvcRowActions {
     display: flex;
-    gap: 14px;
+    gap: 28px;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .absLearnMore {
@@ -2150,60 +2175,82 @@ textarea.absRsvpField {
     opacity: 0.8;
 }
 
-/* Why Choose + Parts Advantage split */
+/* Why Choose + Parts Advantage — two 800px panels side by side */
 .absWhyParts {
     background-color: var(--abs-blackish);
-    color: #fff;
+    padding: 0;
 }
 
 .absWhyPartsGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .absWhyPartsCell {
-    padding: 60px 64px;
+    padding: 90px 80px;
     color: #fff;
     position: relative;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.absWhyPartsCell.is-left {
+    background-color: var(--abs-blackish);
 }
 
 .absWhyPartsCell.is-right {
-    background-color: rgba(91, 149, 169, 0.18);
+    background-color: var(--abs-aqua);
+    position: relative;
+    overflow: hidden;
 }
 
 .absWhyPartsCell h3 {
     font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 40px;
+    line-height: 52px;
     font-weight: 700;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.8px;
     color: #fff;
-    margin: 0 0 28px;
+    margin: 0 0 32px;
+    max-width: 520px;
+}
+
+.absWhyPartsCell.is-right h3 {
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -1.28px;
+    margin-bottom: 24px;
 }
 
 .absWhyList {
     list-style: none;
     padding: 0;
-    margin: 0 0 28px;
+    margin: 0 0 36px;
 }
 
 .absWhyList li {
     position: relative;
-    padding-left: 32px;
+    padding-left: 36px;
     font-family: "Helvetica Neue Heavy", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .absWhyList li span {
     display: block;
     font-family: "Helvetica Neue Roman", sans-serif;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 4px;
 }
 
@@ -2213,49 +2260,117 @@ textarea.absRsvpField {
     font-weight: 900;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 1px;
     color: var(--abs-aqua);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .absWhyPartsCell.is-right p {
     font-family: "Helvetica Neue Roman", sans-serif;
     font-size: 16px;
     line-height: 24px;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 36px;
+    max-width: 520px;
 }
 
-/* Service FAQs */
-.absFaq {
-    padding: 80px 0 90px;
+/* Service Detail intro paragraph */
+.absSvcDetailIntro {
+    padding: 70px 0 40px;
     background-color: #fff;
 }
 
-.absFaqList {
-    max-width: 880px;
+.absSvcDetailIntro p {
+    max-width: 760px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    text-align: center;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
 }
 
-.absFaqItem h4 {
-    font-family: "Helvetica Neue Heavy", sans-serif;
+/* Request Service form (override) — rounded pill fields, narrow column */
+.absRsvpForm.is-svc {
+    padding: 70px 0 80px;
+    background-color: #fff;
+    border-top: 1px solid var(--abs-light-gray-e6);
+}
+
+.absRsvpForm.is-svc .absRsvpInner {
+    max-width: 520px;
+}
+
+.absRsvpForm.is-svc .absRsvpInner h2 {
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.8px;
+    margin-bottom: 32px;
+}
+
+.absRsvpForm.is-svc .absRsvpField {
+    border-radius: 24px;
+    border-color: var(--abs-light-gray-d9);
+    padding: 0 22px;
+    height: 48px;
     font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.absRsvpForm.is-svc textarea.absRsvpField {
+    height: 96px;
+    padding: 14px 22px;
+    border-radius: 18px;
+}
+
+.absRsvpForm.is-svc .absBtn {
+    min-width: 120px;
+    margin-top: 8px;
+}
+
+/* Service FAQs — Q/A blocks with horizontal dividers */
+.absFaq {
+    padding: 70px 0 90px;
+    background-color: #fff;
+    border-top: 1px solid var(--abs-light-gray-e6);
+}
+
+.absFaq .absSectionHead h2 {
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.8px;
+}
+
+.absFaqList {
+    max-width: 1050px;
+    margin: 0 auto;
+    border-top: 1px solid var(--abs-light-gray-e6);
+}
+
+.absFaqItem {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--abs-light-gray-e6);
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+}
+
+.absFaqItem h4,
+.absFaqItem .absFaqQ {
+    display: inline;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 700;
     color: var(--abs-blackish);
-    margin: 0 0 8px;
 }
 
 .absFaqItem p {
-    font-family: "Helvetica Neue Roman", sans-serif;
-    font-size: 14px;
-    line-height: 22px;
+    margin: 0;
+    display: inline;
     color: var(--abs-blackish);
     opacity: 0.85;
-    margin: 0;
 }
 
 /* ============================================================
@@ -2324,12 +2439,49 @@ textarea.absRsvpField {
     }
 }
 
+@media (max-width: 1199px) {
+    .absSvcIntroGrid,
+    .absSvcRow {
+        padding: 0 40px;
+        gap: 56px;
+    }
+
+    .absWhyPartsCell {
+        padding: 70px 48px;
+    }
+
+    .absWhyPartsCell.is-right h3 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .absBanner.is-tall .absBannerContent h1 {
+        font-size: 64px;
+        line-height: 72px;
+    }
+}
+
 @media (max-width: 991px) {
+    .absBanner.is-tall {
+        height: 460px;
+    }
+
+    .absBanner.is-tall .absBannerContent h1 {
+        font-size: 44px;
+        line-height: 52px;
+        margin-bottom: 24px;
+    }
+
     .absSvcIntroGrid,
     .absSvcRow,
     .absWhyPartsGrid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .absSvcIntroGrid,
+    .absSvcRow {
+        padding: 0 24px;
     }
 
     .absSvcRow.is-reverse .absSvcRowImg {
@@ -2338,7 +2490,7 @@ textarea.absRsvpField {
 
     .absSvcIntroImg,
     .absSvcRowImg {
-        height: 260px;
+        height: 280px;
     }
 
     .absSvcIntro {
@@ -2346,31 +2498,51 @@ textarea.absRsvpField {
     }
 
     .absSvcCore {
-        padding: 0 0 56px;
+        padding: 56px 0 56px;
     }
 
     .absSvcRow {
-        margin-bottom: 48px;
+        margin-bottom: 56px;
     }
 
     .absSvcIntroText h2,
-    .absSvcRowText h3,
+    .absSvcRowText h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .absWhyPartsCell {
+        padding: 56px 32px;
+        min-height: auto;
+    }
+
     .absWhyPartsCell h3 {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .absWhyPartsCell.is-right h3 {
+        font-size: 40px;
+        line-height: 44px;
     }
 
     .absSectionHead {
         margin-bottom: 36px;
     }
 
-    .absSectionHead h2 {
-        font-size: 26px;
-        line-height: 32px;
+    .absSectionHead h2,
+    .absRsvpForm.is-svc .absRsvpInner h2,
+    .absFaq .absSectionHead h2 {
+        font-size: 28px;
+        line-height: 34px;
     }
 
-    .absWhyPartsCell {
-        padding: 40px 28px;
+    .absSvcDetailIntro {
+        padding: 48px 0 24px;
+    }
+
+    .absRsvpForm.is-svc {
+        padding: 56px 0;
     }
 
     .absFaq {
