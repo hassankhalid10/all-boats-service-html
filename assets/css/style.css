@@ -1474,6 +1474,624 @@ button {
     }
 }
 
+/* ============================================================
+   SHARED — Banner Hero (used by Blog, Events, Event Detail)
+   ============================================================ */
+.absBanner {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.absBanner .absBannerImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.absBanner .absBannerOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(32, 30, 31, 0.55) 0%, rgba(32, 30, 31, 0.45) 100%);
+}
+
+.absBannerContent {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.absBannerContent h1 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 64px;
+    line-height: 68px;
+    font-weight: 700;
+    letter-spacing: -1.28px;
+    color: #fff;
+    margin: 0;
+}
+
+/* ============================================================
+   SHARED — Breadcrumb
+   ============================================================ */
+.absCrumb {
+    padding: 18px 0;
+    background-color: #fff;
+}
+
+.absCrumb ol {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.absCrumb li {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(32, 30, 31, 0.6);
+}
+
+.absCrumb li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: rgba(32, 30, 31, 0.4);
+}
+
+.absCrumb a {
+    color: rgba(32, 30, 31, 0.6);
+    transition: color 0.2s ease;
+}
+
+.absCrumb a:hover {
+    color: var(--abs-aqua);
+}
+
+.absCrumb li.is-active {
+    color: var(--abs-blackish);
+}
+
+/* ============================================================
+   BLOG LISTING PAGE
+   ============================================================ */
+.absBlogTabs {
+    padding: 32px 0 16px;
+    background-color: #fff;
+}
+
+.absBlogTabsRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 40px;
+}
+
+.absBlogTab {
+    background: none;
+    border: none;
+    padding: 8px 0 12px;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--abs-blackish);
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.absBlogTab:hover {
+    color: var(--abs-aqua);
+}
+
+.absBlogTab.is-active {
+    color: var(--abs-aqua);
+}
+
+.absBlogTab.is-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 24px;
+    height: 2px;
+    background-color: var(--abs-aqua);
+}
+
+.absBlogList {
+    padding: 40px 0 100px;
+    background-color: #fff;
+}
+
+.absBlogGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 60px;
+}
+
+.absBlogCardImg {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+}
+
+.absBlogCardCat {
+    margin-top: 22px;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--abs-aqua);
+}
+
+.absBlogCard h3 {
+    margin: 8px 0 12px;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    color: var(--abs-blackish);
+}
+
+.absBlogCard p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    opacity: 0.85;
+}
+
+/* ============================================================
+   BLOG DETAIL PAGE
+   ============================================================ */
+.absBlogDetail {
+    padding: 24px 0 90px;
+    background-color: #fff;
+}
+
+.absBlogDetailGrid {
+    display: grid;
+    grid-template-columns: 1.85fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.absArticleImg {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+    margin-bottom: 32px;
+}
+
+.absArticleTitle {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: var(--abs-blackish);
+    margin: 0 0 14px;
+}
+
+.absArticleMeta {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--abs-aqua);
+    margin: 0 0 28px;
+}
+
+.absArticleBody p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 22px;
+}
+
+.absSidebarTitle {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    color: var(--abs-blackish);
+    margin: 0 0 24px;
+}
+
+.absSimilarList {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.absSimilarCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+}
+
+.absSimilarCard p {
+    margin: 12px 0 0;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    color: var(--abs-blackish);
+}
+
+/* ============================================================
+   EVENTS LISTING PAGE
+   ============================================================ */
+.absEventsList {
+    padding: 60px 0 90px;
+    background-color: #fff;
+}
+
+.absEventsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 56px;
+}
+
+.absEventCard img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+}
+
+.absEventCard h3 {
+    margin: 18px 0 6px;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--abs-blackish);
+}
+
+.absEventCard .absEventDate {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--abs-aqua);
+}
+
+/* ============================================================
+   EVENT DETAIL PAGE
+   ============================================================ */
+.absEventTop {
+    padding: 18px 0 56px;
+    background-color: #fff;
+}
+
+.absEventTopRow {
+    position: relative;
+}
+
+.absEventTopImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+}
+
+.absEventInfoCard {
+    position: absolute;
+    right: 24px;
+    bottom: -40px;
+    width: 360px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    background-color: var(--abs-blackish);
+    color: #fff;
+    padding: 28px 32px;
+    gap: 24px;
+}
+
+.absEventInfoLabel {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 8px;
+}
+
+.absEventInfoCard h4 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: -0.44px;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.absEventInfoCard p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+
+.absEventBody {
+    padding: 70px 0 24px;
+    background-color: #fff;
+    max-width: 760px;
+}
+
+.absEventBody h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    margin: 0 0 16px;
+}
+
+.absEventBody p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 28px;
+}
+
+.absEventActions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.absEventGallery {
+    padding: 0 0 80px;
+    background-color: #fff;
+}
+
+.absEventGallery h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    color: var(--abs-blackish);
+    margin: 0 0 24px;
+}
+
+.absEventGalleryRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.absEventGalleryRow img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: var(--abs-light-gray-d9);
+}
+
+.absEventInventory {
+    padding: 60px 0 80px;
+    background-color: #fff;
+}
+
+.absEventInventory h2 {
+    text-align: center;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    margin: 0 0 40px;
+}
+
+.absEventInventoryGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* RSVP form */
+.absRsvpForm {
+    padding: 24px 0 100px;
+    background-color: #fff;
+}
+
+.absRsvpInner {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.absRsvpInner h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: var(--abs-blackish);
+    margin: 0 0 28px;
+}
+
+.absRsvpField {
+    display: block;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid var(--abs-light-gray-e6);
+    border-radius: 4px;
+    padding: 0 16px;
+    margin-bottom: 14px;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.absRsvpField:focus {
+    border-color: var(--abs-aqua);
+}
+
+textarea.absRsvpField {
+    height: 110px;
+    padding: 14px 16px;
+    resize: vertical;
+}
+
+.absRsvpForm .absBtn {
+    margin-top: 14px;
+    min-width: 180px;
+}
+
+/* ============================================================
+   BLOG / EVENTS — RESPONSIVE
+   ============================================================ */
+@media (max-width: 991px) {
+    .absBanner {
+        height: 280px;
+    }
+
+    .absBannerContent h1 {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    .absBlogGrid,
+    .absEventsGrid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 40px;
+    }
+
+    .absBlogCardImg {
+        height: 280px;
+    }
+
+    .absEventCard img {
+        height: 260px;
+    }
+
+    .absBlogDetailGrid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .absArticleImg {
+        height: 320px;
+    }
+
+    .absArticleTitle {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .absEventTopImg {
+        height: 320px;
+    }
+
+    .absEventInfoCard {
+        position: static;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .absEventBody h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .absEventGalleryRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .absEventInventoryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .absBanner {
+        height: 220px;
+    }
+
+    .absBannerContent h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .absBlogTabsRow {
+        gap: 6px 20px;
+    }
+
+    .absBlogTab {
+        font-size: 13px;
+    }
+
+    .absBlogCard h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .absBlogCardImg,
+    .absEventCard img {
+        height: 220px;
+    }
+
+    .absArticleImg {
+        height: 220px;
+    }
+
+    .absEventTopImg {
+        height: 240px;
+    }
+
+    .absEventGalleryRow {
+        grid-template-columns: 1fr;
+    }
+
+    .absEventInventoryGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- Hero (slim variant) --- */
 .yswHeroSlim {
     height: 480px;
