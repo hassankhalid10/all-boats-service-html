@@ -2374,6 +2374,386 @@ textarea.absRsvpField {
 }
 
 /* ============================================================
+   PARTS / ABOUT / FINANCING PAGES
+   ============================================================ */
+
+/* Banner extensions — eyebrow + subtitle */
+.absBannerEyebrow {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    margin: 0 0 12px;
+    opacity: 0.95;
+}
+
+.absBannerSub {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    margin: 18px auto 28px;
+    max-width: 720px;
+}
+
+/* About hero eyebrow (between H1 and sub) */
+.absBannerEyebrowAlt {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin: 20px 0 8px;
+}
+
+/* Banner inside breadcrumb-style top link (above hero on About/Financing) */
+.absHeroCrumb {
+    position: absolute;
+    top: 16px;
+    left: 60px;
+    z-index: 3;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.absHeroCrumb a {
+    color: #fff;
+}
+
+/* Full-width image banner (no overlay text) — Financing hero */
+.absImageBanner {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+}
+
+.absImageBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Authorized Brands logo grid */
+.absBrands {
+    padding: 70px 0 90px;
+    background-color: #fff;
+}
+
+.absBrandsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absBrandBox {
+    height: 160px;
+    border: 1px solid var(--abs-light-gray-e6);
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.absBrandBox img {
+    max-width: 70%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Financing 3-feature row with check icons */
+.absFinFeatures {
+    padding: 70px 0 60px;
+    background-color: #fff;
+}
+
+.absFinFeaturesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absFinFeature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.absFinFeatureIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--abs-aqua);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.absFinFeatureText {
+    flex: 1;
+}
+
+.absFinFeature h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--abs-blackish);
+    margin: 0 0 10px;
+}
+
+.absFinFeature p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--abs-blackish);
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* Financing Why Finance banner — aqua bg, title L + body R */
+.absFinWhy {
+    background-color: var(--abs-aqua);
+    padding: 90px 0;
+    color: #fff;
+}
+
+.absFinWhyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.absFinWhy h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #fff;
+    margin: 0;
+}
+
+.absFinWhy h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px;
+}
+
+.absFinWhy p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 28px;
+    max-width: 620px;
+}
+
+/* Payment Calculator banner with image bg */
+.absFinCalc {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    overflow: hidden;
+    background-color: var(--abs-blackish);
+}
+
+.absFinCalc .absFinCalcImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+}
+
+.absFinCalcInner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px 60px;
+}
+
+.absFinStat {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    color: #fff;
+    margin: 0;
+}
+
+.absCalcCard {
+    background-color: #fff;
+    padding: 48px 40px;
+    border-radius: 4px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.absCalcCard h3 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    color: var(--abs-blackish);
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.absCalcCard .absRsvpField {
+    border-radius: 4px;
+    border-color: var(--abs-light-gray-d9);
+    padding: 0 18px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.absCalcCard .absBtn {
+    display: block;
+    margin: 14px auto 0;
+    min-width: 160px;
+}
+
+/* About CTA banner — "Stop By and Say Hello" */
+.absCtaBanner {
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+    background-color: #2f4a55;
+    color: #fff;
+    padding: 70px 24px;
+    text-align: center;
+}
+
+.absCtaBannerImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.absCtaBannerInner {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.absCtaBannerInner h2 {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #fff;
+    margin: 0 0 18px;
+}
+
+.absCtaBannerInner p {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 28px;
+}
+
+/* About quote inline in a row */
+.absQuote {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    margin: 0 0 22px;
+    padding-left: 0;
+}
+
+/* ============================================================
+   PARTS / ABOUT / FINANCING — RESPONSIVE
+   ============================================================ */
+@media (max-width: 991px) {
+    .absImageBanner {
+        height: 320px;
+    }
+
+    .absBrandsGrid,
+    .absFinFeaturesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 24px;
+    }
+
+    .absBrandBox {
+        height: 100px;
+    }
+
+    .absFinWhyGrid,
+    .absFinCalcInner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 56px 24px;
+    }
+
+    .absFinStat {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    .absCtaBannerInner h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .absBannerEyebrow {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .absImageBanner {
+        height: 220px;
+    }
+
+    .absFinStat {
+        font-size: 34px;
+        line-height: 40px;
+    }
+}
+
+/* ============================================================
    BLOG / EVENTS — RESPONSIVE
    ============================================================ */
 @media (max-width: 991px) {
