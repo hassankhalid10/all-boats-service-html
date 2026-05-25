@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /* ============================================================
    FONTS — Helvetica Neue LT Pro
    ============================================================ */
@@ -20,6 +22,557 @@
     src: url('../fonts/helvetica-neue-lt-pro/HelveticaNeueLTW0555Roman.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --abs-blackish: #201E1F;
+    --abs-aqua: #5B95A9;
+    --abs-white: #FFFFFF;
+    --abs-lightest-gray: #FAFAFA;
+    --abs-light-gray-e6: #E6E6E6;
+    --abs-light-gray-d9: #D9D9D9;
+    --abs-text-dark: #222222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Helvetica Neue Roman", "DM Sans", Arial, sans-serif;
+    color: var(--abs-blackish);
+    overflow-x: hidden;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, figure {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ============================================================
+   HEADER — All Boats Service Center
+   Figma: 1920 × 80, blackish bg, hanging oval logo
+   ============================================================ */
+.absHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--abs-blackish);
+    z-index: 200;
+}
+
+.absHeaderInner {
+    position: relative;
+    height: 80px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.absHeaderNav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.absHeaderNav a {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    transition: opacity 0.2s ease;
+}
+
+.absHeaderNav a:hover {
+    opacity: 0.7;
+    color: #fff;
+}
+
+/* Hanging oval logo (center, overlaps below the bar) */
+.absHeaderLogo {
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 28px);
+    transform: translate(-50%, -50%);
+    width: 190px;
+    height: 120px;
+    z-index: 3;
+}
+
+.absHeaderLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.absHeaderRight {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.absHeaderContact {
+    text-align: right;
+    line-height: 1;
+}
+
+.absHeaderContact .absCallLabel {
+    display: block;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-aqua);
+    letter-spacing: 0;
+}
+
+.absHeaderContact .absCallNumber {
+    display: block;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.48px;
+    margin-top: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.absHeaderContact .absCallNumber:hover {
+    color: #fff;
+    opacity: 0.85;
+}
+
+.absHeaderSearch {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+}
+
+.absHeaderSearch:hover {
+    opacity: 0.7;
+}
+
+/* Mobile hamburger */
+.absHamburger {
+    background: none;
+    border: none;
+    width: 28px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.absHamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.25s ease;
+}
+
+/* ============================================================
+   FOOTER — All Boats Service Center
+   Figma: 1920 × 520, left 2/3 light, right 1/3 blackish
+   ============================================================ */
+.absFooter {
+    position: relative;
+    width: 100%;
+    background-color: var(--abs-lightest-gray);
+    overflow: hidden;
+}
+
+.absFooterMain {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: 456px;
+}
+
+/* --- LEFT 2/3 (light bg) --- */
+.absFooterLeft {
+    background-color: var(--abs-lightest-gray);
+    padding: 64px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.absFooterBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.absFooterLogo {
+    width: 210px;
+    height: 130px;
+}
+
+.absFooterLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.absFooterAddress {
+    margin-top: 24px;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    text-decoration: underline;
+    text-align: center;
+}
+
+.absFooterAddress:hover {
+    color: var(--abs-blackish);
+}
+
+.absFooterPhone {
+    display: inline-block;
+    margin-top: 18px;
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--abs-aqua);
+    letter-spacing: -0.64px;
+    text-align: center;
+}
+
+.absFooterPhone:hover {
+    color: var(--abs-aqua);
+    opacity: 0.85;
+}
+
+.absFooterCol {
+    padding-top: 8px;
+}
+
+.absFooterColHead {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--abs-blackish);
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+}
+
+.absFooterLinks li {
+    margin-bottom: 16px;
+}
+
+.absFooterLinks li:last-child {
+    margin-bottom: 0;
+}
+
+.absFooterLinks a {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    transition: color 0.2s ease;
+}
+
+.absFooterLinks a:hover {
+    color: var(--abs-aqua);
+}
+
+/* --- RIGHT 1/3 (dark bg) --- */
+.absFooterRight {
+    background-color: var(--abs-blackish);
+    padding: 110px 80px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.absFooterHeading {
+    font-family: "Helvetica Neue Heavy", sans-serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.96px;
+    margin-bottom: 16px;
+}
+
+.absFooterSub {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    max-width: 360px;
+    margin: 0 auto 28px;
+}
+
+.absFooterForm {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 28px;
+}
+
+.absFooterInput {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid var(--abs-light-gray-e6);
+    padding: 0 56px 0 20px;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    outline: none;
+}
+
+.absFooterInput::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.absFooterInput:focus {
+    border-color: var(--abs-aqua);
+}
+
+.absFooterSubmit {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: none;
+    color: var(--abs-blackish);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.absFooterSubmit:hover {
+    color: var(--abs-aqua);
+}
+
+.absFooterSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.absFooterSocial a {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: var(--abs-aqua);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+}
+
+.absFooterSocial a:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* --- Bottom bar --- */
+.absFooterBottom {
+    border-top: 1px solid var(--abs-light-gray-e6);
+    padding: 24px 80px;
+    background-color: var(--abs-lightest-gray);
+    width: 66.6667%;
+}
+
+.absFooterPolicy {
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--abs-blackish);
+    opacity: 0.6;
+    text-align: right;
+    margin: 0;
+}
+
+/* ============================================================
+   HEADER / FOOTER — RESPONSIVE
+   ============================================================ */
+@media (max-width: 1199px) {
+    .absHeaderInner {
+        padding: 0 40px;
+    }
+
+    .absHeaderNav {
+        gap: 28px;
+    }
+
+    .absFooterLeft {
+        padding: 56px 40px;
+    }
+
+    .absFooterRight {
+        padding: 80px 40px;
+    }
+
+    .absFooterBottom {
+        padding: 24px 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .absHeader {
+        height: 64px;
+    }
+
+    .absHeaderInner {
+        height: 64px;
+        padding: 0 20px;
+    }
+
+    .absHeaderNav,
+    .absHeaderContact .absCallLabel {
+        display: none;
+    }
+
+    .absHamburger {
+        display: flex;
+    }
+
+    .absHeaderLogo {
+        width: 130px;
+        height: 80px;
+        top: calc(50% + 18px);
+    }
+
+    .absHeaderContact .absCallNumber {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .absHeaderRight {
+        gap: 18px;
+    }
+
+    /* Footer stacks */
+    .absFooterMain {
+        grid-template-columns: 1fr;
+    }
+
+    .absFooterLeft {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+        padding: 48px 24px;
+    }
+
+    .absFooterBrand,
+    .absFooterCol {
+        text-align: center;
+    }
+
+    .absFooterRight {
+        padding: 56px 24px;
+    }
+
+    .absFooterHeading {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .absFooterBottom {
+        width: 100%;
+        padding: 20px 24px;
+    }
+
+    .absFooterPolicy {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .absHeaderInner {
+        padding: 0 16px;
+    }
+
+    .absHeaderLogo {
+        width: 110px;
+        height: 70px;
+    }
+
+    .absHeaderContact .absCallNumber {
+        font-size: 16px;
+    }
+
+    .absFooterHeading {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .absFooterPhone {
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 
 /* --- Hero (slim variant) --- */
